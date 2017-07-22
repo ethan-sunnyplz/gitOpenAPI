@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Open API</display-name>
+	
+	<!-- JSON 파싱 Servlet -->
+	<servlet>
+		<servlet-name>JsonParseServlet</servlet-name>
+		<servlet-class>JsonParseServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>JsonParseServlet</servlet-name>
+		<url-pattern>/jsonParse</url-pattern>
+	</servlet-mapping>
+	
+	<!-- XML 파싱 Servlet -->
+	<servlet>
+		<servlet-name>XmlParseServlet</servlet-name>
+		<servlet-class>XmlParseServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>XmlParseServlet</servlet-name>
+		<url-pattern>/xmlParse</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
